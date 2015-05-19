@@ -1,0 +1,87 @@
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ldw.music"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21.1.1" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        
+    <application
+        android:name=".MusicApp"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+     <!--android:screenOrientation="landscape"是限制此页面横屏显示，-->
+<!--theme主界面样式-->
+        <!--"portrait"是限制此页面竖屏显示。-->
+      <!--android:launchMode="singleTask"初始化实例不变-->
+        <!--Intent机制来协助应用间的交互与通讯-->
+        <!--主要内容-->
+        <activity
+            android:name=".activity.MainContentActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+
+
+            android:launchMode="singleTask"
+
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!---->
+
+        <activity android:name=".activity.MenuBackgroundActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <!--Theme.Translucent.NoTitleBar透明标题无背景-->
+        </activity>
+        <activity android:name=".activity.MenuScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <activity android:name=".activity.MenuSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <activity
+            android:name=".activity.PlayQueueActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" >
+        </activity>
+        
+        <activity android:name=".activity.MusicListSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".network.MainSTUDY"
+
+            android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Light.WallpaperSettings"
+            >
+        </activity>
+
+
+
+        <service android:name=".service.MediaService" >
+            <intent-filter>
+                <action android:name="com.ldw.music.service.MediaService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

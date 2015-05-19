@@ -1,0 +1,3 @@
+D:\bs\MyMusic-master2\app\build\intermediates\classes\release
+D:\bs\MyMusic-master2\app\build\intermediates\pre-dexed\release\pinyin4j-2.5.0-da6ef078dde666691c53cb1818abbde0a5f4e72e.jar
+D:\bs\MyMusic-master2\app\build\intermediates\pre-dexed\release\support-v4-19.1.0-3c8ade74b8bf527abea646d3bc9fca5cee302c26.jar
